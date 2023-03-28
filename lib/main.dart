@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:single_multi_child_widget_04/layouts_04/file_explorer.dart';
+import 'package:single_multi_child_widget_04/layouts_04/search_screen.dart';
 import 'package:single_multi_child_widget_04/layouts_04/settings_UI.dart';
 
 import 'homescreen.dart';
@@ -14,6 +15,8 @@ void main() {
         "/" :(context) => HomeScreen(),
         "file_explorer" :(context) => File_Explorer(),
         "setting" : (context) => Settings_UI(),
+        "search" :(context) => Search_Screen(),
+
 
 
 

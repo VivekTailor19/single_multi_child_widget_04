@@ -34,6 +34,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pushNamed(context, "setting");
                 },
                 child: Select(name: "Settings UI",img: "assets/images/folder2.png")),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "search");
+                },
+                child: Select(name: "Search_Screen",img: "assets/images/folder2.png")),
           ],
         ),
       ),
