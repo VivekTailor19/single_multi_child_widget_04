@@ -34,16 +34,14 @@ class _Settings_UIState extends State<Settings_UI> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-            title: Text(
-              "Settings",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
-            centerTitle: true),
+
         body: Padding(
           padding: EdgeInsets.all(10),
           child: Column(
             children: [
+            Text(
+            "Settings",
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,wordSpacing: 2),),
               SizedBox(height: 10),
               TextField(
                 decoration: InputDecoration(
