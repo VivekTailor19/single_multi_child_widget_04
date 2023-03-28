@@ -22,12 +22,18 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
           children: [
             InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, "file_explorer");
                 },
-                child: Select(name: "FileExplorer")),
+                child: Select(name: "FileExplorer",img: "assets/images/folder2.png")),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "setting");
+                },
+                child: Select(name: "Settings UI",img: "assets/images/folder2.png")),
           ],
         ),
       ),
