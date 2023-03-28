@@ -23,8 +23,7 @@ class _File_ExplorerState extends State<File_Explorer> {
     "MEGA",
     "MidasOversea",
     "MIUI",
-    "MiVideoG-lobal"
-        "Music",
+    "MiVideoG-lobal\"Music",
     "PSP",
     "Sacred Games Sea-",
     "Subtitles",
@@ -33,7 +32,32 @@ class _File_ExplorerState extends State<File_Explorer> {
     "tencent",
     "The Witcher"
   ];
+  List sub_title_folder = [
+    "4 items | 28/01/2022 11:08 PM",
+    "1 items | 29/01/2022 1:08 PM",
+    "2 items | 2/01/2022 2:08 PM",
+    "3 items | 8/01/2022 8:08 PM",
+    "5 items | 28/01/2022 11:08 PM",
+    "6 items | 29/01/2022 1:08 PM",
+    "7 items | 2/01/2022 2:08 PM",
+    "90 items | 8/01/2022 8:08 PM",
+    "11 items | 8/01/2022 8:08 PM",
+    "89 items | 2/01/2022 2:08 PM",
+    "3 items | 8/01/2022 8:08 PM",
+    "7 items | 28/01/2022 11:08 PM",
+    "4 items | 28/01/2022 11:08 PM",
+    "1 items | 29/01/2022 1:08 PM",
+    "2 items | 2/01/2022 2:08 PM",
+    "3 items | 8/01/2022 8:08 PM",
+    "5 items | 28/01/2022 11:08 PM",
+    "6 items | 29/01/2022 1:08 PM",
+    "7 items | 2/01/2022 2:08 PM",
+    "90 items | 8/01/2022 8:08 PM",
+    "11 items | 8/01/2022 8:08 PM",
+    "89 items | 2/01/2022 2:08 PM",
 
+
+  ];
 
 
   @override
@@ -92,13 +116,7 @@ class _File_ExplorerState extends State<File_Explorer> {
                 ),
               ),
               Divider(thickness: 3, color: Colors.black26),
-              // ListTile(
-              //   title: Text("Internal storage >",style: TextStyle(fontSize: 15),),
-              //   trailing: Row(mainAxisAlignment: MainAxisAlignment.end,
-              //   children: [
-              //     Icon(Icons.list_rounded),
-              //     Icon(Icons.more_vert_rounded)],),
-              // ),
+
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(child: Container(child: Text("Internal storage >",style: TextStyle(fontSize: 20)),)),
@@ -114,31 +132,29 @@ class _File_ExplorerState extends State<File_Explorer> {
                        view=false;
                      }
                    });
+
                   },
                   child: view==false?Icon(Icons.list_rounded,size: 20,):Icon(Icons.grid_view_sharp,size: 20,)),
                   Icon(Icons.more_vert_rounded,size: 20,)
                 ],),
               Divider(thickness: 1, color: Colors.black26),
-              view==false?Expanded(
+              view==false
+                  ?
+              Expanded(
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 5,
                   ),
                   itemBuilder: (context, index) {
-                    return Folder("${folderName[index]}");
+                    return Folder(name: "${folderName[index]}");
                   },
                   scrollDirection: Axis.vertical,
                   itemCount: folderName.length,
                 ),
-              ):SizedBox(
-                height: 400,
+              ):
+              Expanded(
                 child: ListView.builder(itemBuilder: (context, index) {
-                  ListTile(title: Text("fghf"),trailing: Icon(Icons.arrow_forward_ios_rounded),subtitle: Text("sjdhf"),leading: Image.asset(
-                    "assets/images/folder.jpg",
-                    height: 30,
-                    width: 30,
-                    fit: BoxFit.fill,
-                  ),);
+                  return List_Folder(name: "${folderName[index]}",sub: "${sub_title_folder[index]}");
                 },itemCount: folderName.length,),
               ),
               Row(
@@ -164,12 +180,12 @@ class _File_ExplorerState extends State<File_Explorer> {
     );
   }
 
-  Widget Folder(String? name) {
+  Widget Folder({String? name }) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Image.asset(
-          "assets/images/folder.jpg",
+          "assets/images/folder2.png",
           height: 30,
           width: 30,
           fit: BoxFit.fill,
@@ -182,5 +198,20 @@ class _File_ExplorerState extends State<File_Explorer> {
         )
       ],
     );
+  }
+
+
+  Widget List_Folder({String? name, String? sub}){
+    return ListTile(title: Text("$name"),
+      trailing: Icon(Icons.arrow_forward_ios_rounded),
+      subtitle: Text("$sub"),
+      leading: Container(color: Colors.white,
+        child: Image.asset(
+          "assets/images/folder2.png",
+          height: 30,
+          width: 30,
+          fit: BoxFit.contain,
+        ),
+      ),);
   }
 }
