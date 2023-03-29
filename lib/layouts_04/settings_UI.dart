@@ -107,7 +107,7 @@ class _Settings_UIState extends State<Settings_UI> {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Text("$title"),
-        Text("$other")
+        Text("$other",style: TextStyle(fontSize: 10),)
       ],),
       trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14),
     );
