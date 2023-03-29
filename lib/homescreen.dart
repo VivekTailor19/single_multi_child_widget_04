@@ -22,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment:CrossAxisAlignment.center,
 
           children: [
             InkWell(
@@ -39,6 +40,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pushNamed(context, "search");
                 },
                 child: Select(name: "Search_Screen",img: "assets/images/folder2.png")),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "pay");
+                },
+                child: Select(name: "Pay",img: "assets/images/folder2.png")),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "pawanUI");
+                },
+                child: Select(name: "Pawan UIKit",img: "assets/images/folder2.png")),
           ],
         ),
       ),
