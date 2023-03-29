@@ -17,12 +17,6 @@ class _Pawan_UIKitState extends State<Pawan_UIKit> {
             Expanded(
               child: Container(
                 height: 300,
-                decoration: BoxDecoration(color: Colors.white),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                height: 300,
                 decoration: BoxDecoration(
                   borderRadius:BorderRadius.only(bottomLeft: Radius.circular(100),bottomRight: Radius.circular(100)),
                   gradient: LinearGradient(colors: [Color(0xff334047), Colors.black])),
@@ -67,6 +61,12 @@ class _Pawan_UIKitState extends State<Pawan_UIKit> {
                     )
                   ],),
                 ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                height: 300,
+                decoration: BoxDecoration(color: Colors.white),
               ),
             ),
 
