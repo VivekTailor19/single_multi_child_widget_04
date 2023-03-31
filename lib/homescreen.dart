@@ -60,6 +60,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pushNamed(context, "pawanprofile");
                 },
                 child: Select(name: "Pawan's Profile",img: "assets/images/folder2.png")),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "food");
+                },
+                child: Select(name: "Food Page",img: "assets/images/folder2.png")),
           ],
         ),
       ),

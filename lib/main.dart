@@ -8,6 +8,7 @@ import 'package:single_multi_child_widget_04/layouts_04/settings_UI.dart';
 
 import 'homescreen.dart';
 import 'layouts_04/flutter_login.dart';
+import 'layouts_04/food_signup.dart';
 import 'layouts_04/pawan_UI.dart';
 import 'layouts_04/pay_UI.dart';
 
@@ -24,6 +25,8 @@ void main() {
         "pawanUI":(context) => Pawan_UIKit(),
         "flutterlogin":(context) => Flutter_UI(),
         "pawanprofile":(context) => Pawan_Profile(),
+        "food":(context) => Food_SignUP(),
+
 
 
 

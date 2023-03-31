@@ -57,7 +57,7 @@ class _Pawan_ProfileState extends State<Pawan_Profile> {
                 Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: data.asMap().entries.map((e) => Box(data[e.key])).toList()
                 ),
-                Text("Photos",style: TextStyle(fontSize: ),)
+                Text("Photos",style: TextStyle(fontSize: 20),)
 
               ],
             ),
