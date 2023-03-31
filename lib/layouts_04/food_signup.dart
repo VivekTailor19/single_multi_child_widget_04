@@ -66,6 +66,7 @@ class _Food_SignUPState extends State<Food_SignUP> {
                     SizedBox(width: 15),
                     Container( height: 90,width: 300,
                       child: Column(
+
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("Enter Password",style: TextStyle(fontSize: 22,color: Colors.white,wordSpacing: 3),),
