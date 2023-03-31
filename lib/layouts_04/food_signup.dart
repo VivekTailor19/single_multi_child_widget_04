@@ -50,7 +50,6 @@ class _Food_SignUPState extends State<Food_SignUP> {
                             enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white,width: 2)),
                             focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white,width: 2)),
                           ),
-
                         ),
 
                       ],
