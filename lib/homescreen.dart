@@ -50,6 +50,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pushNamed(context, "pawanUI");
                 },
                 child: Select(name: "Pawan UIKit",img: "assets/images/folder2.png")),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "flutterlogin");
+                },
+                child: Select(name: "Flutter UI",img: "assets/images/folder2.png")),
           ],
         ),
       ),

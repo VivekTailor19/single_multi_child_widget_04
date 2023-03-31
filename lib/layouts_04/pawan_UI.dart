@@ -45,15 +45,18 @@ class _Pawan_UIKitState extends State<Pawan_UIKit> {
                       child: TextField(
 
                         decoration: InputDecoration(
+
                           filled: true,
                           fillColor: Colors.white,
+
                           prefixIconColor: Colors.white,
                           suffixIconColor: Colors.white,
                           prefixIcon: Icon(Icons.search_rounded,size: 20),
                           hintText: "Find our product",
                           hintStyle: TextStyle(wordSpacing: 3,fontSize: 16),
                           suffixIcon: Icon(Icons.menu_rounded,size: 20,),
-                          border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10)))
+
+                          border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10),))
 
 
                         ),
@@ -63,12 +66,12 @@ class _Pawan_UIKitState extends State<Pawan_UIKit> {
                 ),
               ),
             ),
-            Expanded(
-              child: Container(
-                height: 300,
-                decoration: BoxDecoration(color: Colors.white),
-              ),
-            ),
+            // Expanded(
+            //   child: Container(
+            //     height: 300,
+            //     decoration: BoxDecoration(color: Colors.white),
+            //   ),
+            // ),
 
           ],
 
