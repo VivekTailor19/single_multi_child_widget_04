@@ -1,4 +1,4 @@
-import 'dart:io';
+
 
 import 'package:flutter/material.dart';
 
@@ -20,11 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
             style: TextStyle(fontSize: 15),
           ),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment:CrossAxisAlignment.center,
+        body: GridView(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3),
+        scrollDirection: Axis.vertical,
+          children:  [
 
-          children: [
             InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, "file_explorer");
@@ -47,11 +48,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Select(name: "Pay",img: "assets/images/folder2.png")),
             InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, "pawanUI");
-                },
-                child: Select(name: "Pawan UIKit",img: "assets/images/folder2.png")),
-            InkWell(
-                onTap: () {
                   Navigator.pushNamed(context, "flutterlogin");
                 },
                 child: Select(name: "Flutter UI",img: "assets/images/folder2.png")),
@@ -65,8 +61,26 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pushNamed(context, "food");
                 },
                 child: Select(name: "Food Page",img: "assets/images/folder2.png")),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "pawan2");
+                },
+                child: Select(name: "Pawan 2 UI",img: "assets/images/folder2.png")),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "my cart");
+                },
+                child: Select(name: "MY CART",img: "assets/images/folder2.png")),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "pawanUI");
+                },
+                child: Select(name: "Pawan UIKit",img: "assets/images/folder2.png")),
+
           ],
         ),
+
+
       ),
     );
   }

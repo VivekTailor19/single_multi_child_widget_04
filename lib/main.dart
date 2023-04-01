@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:single_multi_child_widget_04/layouts_04/file_explorer.dart';
+
+import 'package:single_multi_child_widget_04/layouts_04/pawan2pro.dart';
 import 'package:single_multi_child_widget_04/layouts_04/pawanProfile.dart';
 import 'package:single_multi_child_widget_04/layouts_04/search_screen.dart';
 import 'package:single_multi_child_widget_04/layouts_04/settings_UI.dart';
@@ -9,6 +11,7 @@ import 'package:single_multi_child_widget_04/layouts_04/settings_UI.dart';
 import 'homescreen.dart';
 import 'layouts_04/flutter_login.dart';
 import 'layouts_04/food_signup.dart';
+import 'layouts_04/mycart_UI.dart';
 import 'layouts_04/pawan_UI.dart';
 import 'layouts_04/pay_UI.dart';
 
@@ -26,6 +29,8 @@ void main() {
         "flutterlogin":(context) => Flutter_UI(),
         "pawanprofile":(context) => Pawan_Profile(),
         "food":(context) => Food_SignUP(),
+        "pawan2":(context) => Pawan2UI(),
+        "my cart":(context) => My_Cart(),
 
 
 

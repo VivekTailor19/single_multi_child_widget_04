@@ -64,6 +64,8 @@ class _File_ExplorerState extends State<File_Explorer> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        floatingActionButton: FloatingActionButton(onPressed: (){},backgroundColor: Colors.blue,
+        child: Icon(Icons.cleaning_services_outlined,color: Colors.white,),),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
@@ -157,22 +159,7 @@ class _File_ExplorerState extends State<File_Explorer> {
                   return List_Folder(name: "${folderName[index]}",sub: "${sub_title_folder[index]}");
                 },itemCount: folderName.length,),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Container(
-                    height: 50,
-                    width: 50,
-                    alignment: Alignment.center,
-                    child: Icon(
-                      Icons.cleaning_services_rounded,
-                      size: 20,
-                    ),
-                    decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.blue,),
 
-                  )
-                ],
-              )
             ],
           ),
         ),
@@ -194,7 +181,7 @@ class _File_ExplorerState extends State<File_Explorer> {
           "$name",
           textAlign: TextAlign.center,
           softWrap: true,
-          style: TextStyle(fontSize: 8),
+          style: TextStyle(fontSize: 10.5),
         )
       ],
     );
